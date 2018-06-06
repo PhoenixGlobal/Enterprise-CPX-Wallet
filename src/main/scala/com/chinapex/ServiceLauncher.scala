@@ -33,7 +33,9 @@ trait ServiceLauncher {
 //    AwsCtrlService.startTestQuartz()
 //    if (ConfigurationHelper.awsTrigger) AwsCtrlService.startRunScheduleInstance(ConfigurationHelper.awsTestInstanceId)
   }
-
+  def startRsServer():Unit = {
+  	???
+  }
   def startRpcServer(): Unit = {
     val services = Map(
       classOf[HiveTableService].getName -> HiveTableServiceImpl.build(SparkHelper.sparkContext.hadoopConfiguration)
